@@ -1,6 +1,3 @@
-# A tiny Python module for configuration
-## Basic usage
-```python
 from argparse import ArgumentParser
 import yaml
 
@@ -13,11 +10,10 @@ parser.add_argument("--arg2", type=str)
 args = parser.parse_args()
 
 with open(args.config) as f:    
-    config = vars(args) | Struct(yaml.load(f, yaml.SafeLoader))
+    config = vars(args) | tc.Struct(yaml.load(f, yaml.SafeLoader))
 
 print("=" * 80)
 print('Parameters')
 print("-" * 80)
 print(config)
 print("=" * 80)
-```
