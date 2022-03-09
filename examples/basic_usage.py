@@ -5,8 +5,7 @@ import tiny_conf as tc
 
 parser = ArgumentParser()
 parser.add_argument("config", type=str)
-parser.add_argument("--arg1", type=str)
-parser.add_argument("--arg2", type=str)
+parser.add_argument("workspace", type=str)
 args = parser.parse_args()
 
 with open(args.config) as f:    
@@ -17,3 +16,6 @@ print('Parameters')
 print("-" * 80)
 print(config)
 print("=" * 80)
+
+model = tc.instantiate(config.model)
+optimizer = tc.instantiate(config.optimizer, params=model.parameters())
