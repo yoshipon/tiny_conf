@@ -1,3 +1,14 @@
-section1:
-  param1: 10.0
-  param2: 5.e-5
+num_epoch: 200
+batch_size: 32
+
+loss:
+  _target_: torch.nn.BCELoss
+
+model:
+  _target_: foo_bar_model.FooBarModel
+  hidden_size: 64
+  num_layers: 5
+
+optimizer:
+  _target_: torch.optim.Adam
+  lr: 1.e-3
