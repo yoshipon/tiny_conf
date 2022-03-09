@@ -44,4 +44,8 @@ optimizer:
 ```sh
 $ python main.py config.yaml ./checkpoint_path/
 ```
-<img src="assets/print_results.png" width=512>
+<img src="assets/print_result.png" width=512>
+
+## Known issue
+[ ] There is no install instruction 
+[ ] There is no documents
