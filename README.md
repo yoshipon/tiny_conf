@@ -1,4 +1,5 @@
-# A tiny Python library for configuration
+# tiny_conf
+A light-weight configuration library whose API is inspired by [Hydra](https://github.com/facebookresearch/hydra) and [OmegaConf](https://github.com/omry/omegaconf).
 ## Basic usage
 ```python:main.py
 from argparse import ArgumentParser
